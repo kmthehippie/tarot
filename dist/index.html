@@ -4,9 +4,244 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tarot</title>
-    <script src="./main.js" defer></script>
+    <script type="module" src="./main.js" defer></script>
 </head>
 <body>
-    <div class="test">TEST</div>
+    <!-- <div class="test">TEST</div> -->
+    <header>
+        <nav>
+            <div class="major-arcana nav">
+                <h1>MAJOR</h1>
+            </div>
+            <div class="major-arcana-modal modal major inactive">
+                <ul>
+                    <li class="card-btn">The Fool</li>
+                    <li class="card-btn">The Magician</li>
+                    <li class="card-btn">The High Priestess</li>
+                    <li class="card-btn">The Empress</li>
+                    <li class="card-btn">The Emperor</li>
+                    <li class="card-btn">The Hierophant</li>
+                    <li class="card-btn">The Lovers</li>
+                    <li class="card-btn">The Chariot</li>
+                    <li class="card-btn">Justice</li>
+                    <li class="card-btn">The Hermit</li>
+                    <li class="card-btn">Wheel of Fortune</li>
+                    <li class="card-btn">Strength</li>
+                    <li class="card-btn">The Hanged Man</li>
+                    <li class="card-btn">Death</li>
+                    <li class="card-btn">Temperance</li>
+                    <li class="card-btn">The Devil</li>
+                    <li class="card-btn">The Tower</li>
+                    <li class="card-btn">The Star</li>
+                    <li class="card-btn">The Moon</li>
+                    <li class="card-btn">The Sun</li>
+                    <li class="card-btn">Judgement</li>
+                    <li class="card-btn">The World</li>
+                </ul>
+            </div>
+            <div class="minor-arcana">
+                <div class="round sword nav"><img src="./sword.png" alt="Sword Icon"></div>
+                <div class="minor-arcana-modal modal swords inactive">
+                    <ul>
+                        <li class="card-btn">Ace of Swords</li>
+                        <li class="card-btn">Two of Swords</li>
+                        <li class="card-btn">Three of Swords</li>
+                        <li class="card-btn">Four of Swords</li>
+                        <li class="card-btn">Five of Swords</li>
+                        <li class="card-btn">Six of Swords</li>
+                        <li class="card-btn">Seven of Swords</li>
+                        <li class="card-btn">Eight of Swords</li>
+                        <li class="card-btn">Nine of Swords</li>
+                        <li class="card-btn">Ten of Swords</li>
+                        <li class="card-btn">Page of Swords</li>
+                        <li class="card-btn">Knight of Swords</li>
+                        <li class="card-btn">Queen of Swords</li>
+                        <li class="card-btn">King of Swords</li>
+                    </ul>
+                </div>
+                <div class="round wand nav"><img src="./wand.png" alt="Wand Icon"></div>
+                <div class="minor-arcana-modal modal wands inactive">
+                    <ul>
+                        <li class="card-btn">Ace of Wands</li>
+                        <li class="card-btn">Two of Wands</li>
+                        <li class="card-btn">Three of Wands</li>
+                        <li class="card-btn">Four of Wands</li>
+                        <li class="card-btn">Five of Wands</li>
+                        <li class="card-btn">Six of Wands</li>
+                        <li class="card-btn">Seven of Wands</li>
+                        <li class="card-btn">Eight of Wands</li>
+                        <li class="card-btn">Nine of Wands</li>
+                        <li class="card-btn">Ten of Wands</li>
+                        <li class="card-btn">Page of Wands</li>
+                        <li class="card-btn">Knight of Wands</li>
+                        <li class="card-btn">Queen of Wands</li>
+                        <li class="card-btn">King of Wands</li>
+                    </ul>
+                </div>
+                <div class="round cup nav"><img src="./goblet.png" alt="Cup Icon"></div>
+                <div class="minor-arcana-modal modal cups inactive">
+                    <ul>
+                        <li class="card-btn">Ace of Cups</li>
+                        <li class="card-btn">Two of Cups</li>
+                        <li class="card-btn">Three of Cups</li>
+                        <li class="card-btn">Four of Cups</li>
+                        <li class="card-btn">Five of Cups</li>
+                        <li class="card-btn">Six of Cups</li>
+                        <li class="card-btn">Seven of Cups</li>
+                        <li class="card-btn">Eight of Cups</li>
+                        <li class="card-btn">Nine of Cups</li>
+                        <li class="card-btn">Ten of Cups</li>
+                        <li class="card-btn">Page of Cups</li>
+                        <li class="card-btn">Knight of Cups</li>
+                        <li class="card-btn">Queen of Cups</li>
+                        <li class="card-btn">King of Cups</li>
+                    </ul>
+                </div>
+                <div class="round pentacle nav"><img src="./star.png" alt="Pentacle Icon" id="pentacle"></div>
+                <div class="minor-arcana-modal modal pentacles inactive">
+                    <ul>
+                        <li class="card-btn">Ace of Pentacles</li>
+                        <li class="card-btn">Two of Pentacles</li>
+                        <li class="card-btn">Three of Pentacles</li>
+                        <li class="card-btn">Four of Pentacles</li>
+                        <li class="card-btn">Five of Pentacles</li>
+                        <li class="card-btn">Six of Pentacles</li>
+                        <li class="card-btn">Seven of Pentacles</li>
+                        <li class="card-btn">Eight of Pentacles</li>
+                        <li class="card-btn">Nine of Pentacles</li>
+                        <li class="card-btn">Ten of Pentacles</li>
+                        <li class="card-btn">Page of Pentacles</li>
+                        <li class="card-btn">Knight of Pentacles</li>
+                        <li class="card-btn">Queen of Pentacles</li>
+                        <li class="card-btn">King of Pentacles</li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="body">
+      
+    </div>
+
+    
+
+    <footer>
+        Another fun project by KM
+        <li>Thank you to: </li>
+        <li><a href="https://www.flaticon.com/free-icons/magic-wand" title="magic wand icons">Magic wand icons created by Freepik - Flaticon</a></li>
+        <li><a href="https://www.flaticon.com/free-icons/coin" title="coin icons">Coin icons created by Good Ware - Flaticon</a></li>
+        <li><a href="https://www.flaticon.com/free-icons/goblet" title="goblet icons">Goblet icons created by Freepik - Flaticon</a></li>  
+        <li><a href="https://www.flaticon.com/free-icons/sword" title="sword icons">Sword icons created by Freepik - Flaticon</a></li>  
+    </footer>
+
+<!-- ===================RENDER FOR HOME PAGE================= -->
+<template id="home-template">
+    <div class="home-page">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Welcome to Tarot Cards and it's meanings</h1>
+            </div>
+            <div class="hero-subtext">
+                <h3>A one stop for all your tarot card curiosities.</h3>
+            </div>
+            <div class="sub-hero-content">
+                <p>To begin: Select MAJOR for cards that are from the Major Arcana. Or, select any of the Minor Arcana suits to select the card you are looking for.</p>
+                <p>No idea what I am talking about? Click <a href="">THIS </a>to learn more about the basics of tarot.</p>
+            </div>
+        </div>
+        <div class="info-content">
+            <div class="card reminder-text">
+                <h2>Reminder:</h2>
+                <ul>
+                    <li>One should never read tarot for life and death circumstances.</li>
+                    <li>Tarot cards only gives you a glimpse into a <span class="italic">possible</span> future, not a fixed one.</li>
+                    <li>Take what resonates and leave the rest</li>
+                </ul>
+            </div>
+            <div class="card notif-text">
+                <h2>Notification:</h2>
+                <ul>
+                    <li>The card meanings are only available for the upright. If you would like me to add reversal meanings, please let me know.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+</template>  
+
+<!-- ===================RENDER FOR EACH CARD================= -->
+<template id="card-template">
+    <div class="card-page">
+        <div class="card-header">
+            <div class="leftbtn card-np-btn">&#x2190</div>
+            <div class="card-title"></div>
+            <div class="rightbtn card-np-btn">&#x2192</div>
+        </div>
+        <div class="card-body">
+            <div class="image-carousel">
+                <div class="leftbtn carousel-btn">&lt;</div>
+                <div class="carousel-card">
+                    <div class="card-images">
+                    </div>
+                    <div class="card-bys"></div>
+                </div>
+
+                <div class="rightbtn carousel-btn">&gt;</div>
+            </div>
+
+            <div class="image-nav-btns">
+                <!-- for each image, create a circle class and place them in this nav. the active is the center -->
+                <!-- <div class="circle "></div>
+                <div class="circle "></div>
+                <div class="circle active"></div>
+                <div class="circle "></div>
+                <div class="circle "></div> -->
+            </div>
+        </div>
+        
+        <div class="card-nav-footer">
+            <ul>
+                <!-- for each of this, create a link to create a modal that appears on the page. when click other button, the first modal become inactive and renders the next -->
+                <li class="keywords mininav">Key Words</li>
+                <li class="general mininav">General</li>
+                <li class="career mininav">Career & Finances</li>
+                <li class="love mininav">Love & Relationships</li>
+                <li class="spirituality mininav">Spirituality</li>
+                <li class="img-desc mininav">Image Description</li>
+            </ul>
+        </div>
+        
+   </div>
+
+   
+</template>
+
+<!-- ===================RENDER FOR CARD MODAL================= -->
+<template id="template-kw-card-modal"> 
+    <div class="card-modal">
+        <div class="inner-card-modal">
+            <div class="close"> X </div>
+            <div class="keywords">
+                <h2> Key Words </h2>
+                <ul class="keywords-list">
+                </ul>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template id="template-other-card-modal"> 
+    <div class="card-modal">
+        <div class="inner-card-modal">
+            <div class="close"> X </div>
+            <div class="inner-text-modal">
+                <h2 class="modal-text-header"></h2>
+                <p class="modal-text"></p>
+            </div>
+        </div>
+    </div>
+</template>
+
 </body>
 </html>

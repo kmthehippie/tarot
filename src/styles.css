@@ -1,4 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Marvel:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap');
 
-.test{
-    color: red;
+
+:root{
+    --dark-yellow: #FABE2C;
+    --light-yellow: #FED843;
+    --lightest-yellow: #fff7bd;
+    --background-light-yellow: #FFFEF2;
+    --dark: #1E1E1E;
+    --marvel: 'Marvel', sans-serif;
+    --mont: 'Montserrat', sans-serif;
+}
+*,*::after, *::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background-color: var(--background-light-yellow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    max-height: fit-content;
+    width: 100vw;
+    margin-right: 1rem;
+}
+
+/* ===============================HEADER============================== */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+header{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-right: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+.major-arcana{
+    background-color: var(--dark);
+    border-radius: 1rem;
+    padding: 0.6rem 1.25rem;
+    text-align: center;
+}
+.major-arcana h1{
+    font-size: 24px;
+    color: var(--dark-yellow);
+    font-family: var(--marvel);
+    letter-spacing: 5px;
+}
+.minor-arcana{
+    display: flex;
+    gap: 0.3rem;
+}
+.round{
+    border-radius: 2rem;
+    height: 47px;
+    width: 47px;
+    background-color: var(--dark);
+    position: relative;
+}
+
+.round img{
+    width: 60%;
+    height: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%)
+}
+#pentacle{
+    width: 90%;
+    height: 90%;
+}
+
+
+
+
+
+
+/* ===============================BODY================================ */
+.body{
+    height: 100vh;
+    margin-right: 1rem;
+}
+.home-page.inactive{
+    display:none;
+}
+.hero-content{
+    background-color: var(--light-yellow);
+    height: 60vh;
+}
+.hero-content h1{
+    font-family: var(--marvel);
+    font-size: 48px;
+    padding-top: 3rem;
+    padding-left: 2rem;
+}
+.hero-subtext{
+    position: relative;
+}
+.hero-subtext h3{
+    font-family: var(--mont);
+    font-size: 14px;
+    font-weight: 400;
+    width: 10rem;
+    position: absolute;
+    text-align: right;
+    top: 0.5rem;
+    right: 2rem;
+}
+
+.sub-hero-content{
+    background-color: var(--dark-yellow);
+    margin-top: 6rem;
+    padding: 1.15rem;
+}
+
+.sub-hero-content p{
+    font-family: var(--mont);
+    font-size: 10px;
+}
+.sub-hero-content a{
+    text-decoration: none;
+    color: var(--background-light-yellow)
+}
+
+.card{
+    font-family: var(--mont);
+    font-size: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+}
+
+.italic{
+    font-style: italic;
+}
+
+.card ul li{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    line-height: 0.8rem;
+}
+.card h2{
+    font-size: 14px;
+    font-weight: 400;
+    font-style: italic;
+    padding-bottom: 0.5rem;
+}
+
+/* ==========================MODAL NAV BAR ======================= */
+
+.major-arcana-modal{
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 5rem;
+    transition: 0.4s;
+    text-align: center;
+    z-index: 10;
+}
+
+.major-arcana-modal li{
+    list-style: none;
+    padding: 1rem 2rem;
+    width: 100vw;
+    background-color: var(--dark);
+    color: var(--background-light-yellow);
+    font-family: var(--mont);
+    
+}
+
+.major-arcana-modal.inactive{
+    display: none;
+}
+
+.minor-arcana-modal{
+    position: absolute;
+    z-index: 10;
+    left: 0rem;
+    top: 5rem;
+    transition: 0.4s;
+}
+
+.minor-arcana-modal li{
+    text-align: center;
+    list-style: none;
+    padding: 1rem 2rem;
+    width: 100vw;
+    background-color: var(--dark);
+    color: var(--background-light-yellow);
+    font-family: var(--mont);
+}
+.minor-arcana-modal.inactive{
+    display: none;
+}
+
+/* =======================CARD DISPLAY ========================= */
+
+.card-page{
+    background-color: var(--light-yellow);
+    padding-top: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vh;
+    padding-bottom: 2rem;
+    position: relative;
+    height: 100%;
+
+}
+.card-header{
+    width: 100vw;
+    margin-top: 1vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--dark-yellow);
+    font-size: 3.5vh;
+    font-family: var(--marvel);
+    letter-spacing: 5px;
+    font-weight: 700;
+    height: 8vh;
+    margin-bottom: 1vh;
+}
+.card-body{
+    background: var(--dark);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    height: fit-content;
+}
+
+.image-carousel{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--light-yellow);
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: var(--mont);
+}
+
+.card-image{
+    background: var(--background-light-yellow);
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin: 0.5rem;
+    display: none;
+}
+.card-image.active{
+    display: flex;
+}
+
+.image-carousel img{
+    max-width: 100%;
+}
+.card-by{
+    color:var(--background-light-yellow);
+    font-family: var(--mont);
+    font-size: 10px;
+    text-align: center;
+    display: none;
+}
+.card-by.active{
+    display: block;
+}
+
+.image-nav-btns{
+    height: 2rem;
+    padding-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding-bottom: 0.5rem;
+}
+.circle{
+    padding: 0.5rem;
+    border-radius: 50%;
+    background-color: var(--lightest-yellow)
+}
+
+.circle.active{
+    background-color: var(--light-yellow);
+}
+
+.card-nav-footer{
+    position: fixed;
+    bottom: 10vh;
+    width: 85vw;
+    overflow: auto;
+    white-space: nowrap;
+    background-color: var(--dark-yellow);
+    z-index: 10
+}
+.card-nav-footer ul{
+    display: flex;
+    font-family: var(--mont);
+}
+
+.card-nav-footer li{
+    list-style: none;
+    display: inline-block;
+    padding: 1rem 0.5rem;
+    transform: 1s;
+    font-size: 2vh;
+
+}
+
+
+
+/* ====================CARD MODAL DISPLAY ====================== */
+.card-nav-footer li.active{
+    background-color: var(--dark);
+    color: var(--light-yellow);
+    font-weight: 700;
+    transform: 0.4s;
+}
+
+.card-modal{
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    top: 8vh;
+    width: 100%;
+    height: 100%;
+}
+
+.inner-card-modal{
+    border: 2px solid var(--dark-yellow);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--background-light-yellow);
+    font-family: var(--mont);
+    margin: 1rem;
+    height: fit-content;
+    padding: 1rem;
+    position: relative;
+}
+.close{
+    color: var(--dark-yellow);
+    font-family: var(--mont);
+    font-weight: 700;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+.close:hover{
+    color: rgb(116, 0, 0);
+}
+.inner-card-modal h2{
+    margin-top: 2rem;
+    text-decoration: underline;
+    font-size: 2rem;
+    text-align: center
+}
+
+.inner-card-modal li{
+    line-height: 2rem;
+    list-style: disc;
+}
+
+.inner-card-modal p{
+    padding: 1rem;
+    line-height: 1.15rem;
+    font-size: 0.8rem;
+}
+
+
+/* ===============================FOOTER============================== */
+
+footer{
+    position: fixed;
+    bottom: 0;
+    margin-top: 0.15rem;
+    font-family: var(--mont);
+    font-size: 10px;
+    background-color: var(--dark);
+    width: 100vw;
+    text-align: center;
+    color: var(--background-light-yellow);
+}
+footer li{
+    list-style: none;
+    font-size: 8px;
+}
+footer a{
+    text-decoration: none;
+    color: var(--dark-yellow);
 }
