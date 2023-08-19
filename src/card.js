@@ -35,6 +35,7 @@ export const Card = {
             circle.classList.add("circle");
             div.querySelector(".image-nav-btns").appendChild(circle)
             
+            
             if (item.imgText.includes("Waite")){ 
                 circle.classList.add("active");
                 createCardBy.classList.add("active");
@@ -97,6 +98,23 @@ export const Card = {
                 div[currentIndex].classList.add("active")
                 cardBy[currentIndex].classList.add("active");
                 circles[currentIndex].classList.add("active");
+            })
+        })
+
+        circles.forEach((circle, idx) => {
+            circle.addEventListener("click", ()=>{
+                circle.setAttribute("data-num", idx);
+                if (idx  === currentIndex){
+                    return;
+                } else {
+                    cardBy[currentIndex].classList.remove("active");
+                    div[currentIndex].classList.remove("active");
+                    circles[currentIndex].classList.remove("active");
+                    div[idx].classList.add("active")
+                    cardBy[idx].classList.add("active");
+                    circles[idx].classList.add("active");
+                    currentIndex = idx;
+                }
             })
         })
     },
@@ -181,5 +199,25 @@ export const Card = {
                 }
             })
         })
-    }
+    },
+    // circleFn: () => {
+    //     let currentCircle = 0;
+    //     const circles = document.querySelectorAll(".circle");
+    //     circles.forEach((dot, idx) => {
+    //         dot.setAttribute('data-num',idx);
+    //         console.log(dot);
+    //         console.log(idx);
+    //         dot.addEventListener("click", ()=>{
+    //             console.log(idx)
+    //             console.log(dot);
+    //             if (idx === currentCircle){
+    //                 return;
+    //             }
+    //             else{
+    //                 let cardImages = document.querySelectorAll(".card-images");
+    //                 console.log(cardImages);
+    //             }
+    //         })
+    //     })
+    // }
 }

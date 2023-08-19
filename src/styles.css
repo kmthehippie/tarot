@@ -101,7 +101,6 @@ header{
 }
 .home-page{
     display: block;
-    
 }
 .home-page.inactive{
     display:none;
@@ -188,8 +187,6 @@ header{
     background-color: var(--dark);
     color: var(--background-light-yellow);
     font-family: var(--mont);
-    cursor: pointer;
-
     
 }
 
@@ -213,8 +210,6 @@ header{
     background-color: var(--dark);
     color: var(--background-light-yellow);
     font-family: var(--mont);
-    cursor: pointer;
-
 }
 .minor-arcana-modal.inactive{
     display: none;
@@ -248,13 +243,11 @@ header{
     font-weight: 700;
     height: 8vh;
 }
-
-.carousel-btn, .card-np-btn{
-    cursor: pointer;
+.carousel-btn{
     transition: 0.4s;
 
 }
-.carousel-btn:hover, .card-np-btn:hover{
+.carousel-btn:hover{
     color: red;
     transition: 0.4s;
     
@@ -337,7 +330,6 @@ header{
 }
 
 .card-nav-footer li{
-    cursor: pointer;
     list-style: none;
     display: inline-block;
     padding: 1rem 0.5rem;
@@ -363,7 +355,6 @@ header{
     top: 17vh;
     width: 100%;
     height: fit-content + 10vh;
-    transition: 0.4s ease-in;
 }
 
 .inner-card-modal{
@@ -378,7 +369,6 @@ header{
     height: fit-content;
     padding: 1rem;
     position: relative;
-    transition: 0.4s ease-in;
 }
 .close{
     color: var(--lightest-yellow);
@@ -479,34 +469,25 @@ footer a{
         background-color: var(--dark);
 
     }
+    .card li{
+        color: var(--background-light-yellow);
+    }
+    .card h2{
+        color: var(--background-light-yellow);
+    }
     .body{
         max-width: 1200px;
         width: 100%;
-        border: 2px solid var(--dark)
+        border: 2px solid var(--dark);
     }
     .major-arcana h1{
         font-size: 3rem;
     }
-    .home-page{
-        margin-top: 3rem;
-        max-width: 1200px;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
     .info-content{
         display: grid;
         justify-items: center;
-        width: 780px;
         grid-template-columns: 1fr 1fr;
-        color: var(--background-light-yellow);
     }
-    /* .info-content li{
-        color: pink;
-    } */
     .round{
         width: 60px;
         height: 60px;
@@ -524,6 +505,7 @@ footer a{
         left: 50vw;
         transform: translateX(-50%);
         margin-top: 2rem;
+        width: 100%;
     }
     .major-arcana-modal ul, .minor-arcana-modal ul{
         display: flex;
@@ -551,12 +533,11 @@ footer a{
         height: 90vh;
     }
     .card-modal{
-        transition:0.4s ease-in;
         position: absolute;
         top: 23vh;
-        left: 55%;
+        left: 60%;
         transform: translateX(-30%);
-        width: 600px;
+        width: 400px;
         border-radius: 1rem;
     }
     .card-body{
@@ -564,18 +545,11 @@ footer a{
         left: 30%;
         transform: translateX(-70%);
         top: 23vh;
-        max-width: 350px;
-    }
-    .card-image{
-        width: 250px;
     }
     .card-header{
         margin-top:2rem;
         width: 100%;
         border: none;
-    }
-    .card-by{
-        width: 250px;
     }
     .card-nav-footer {
         display: flex;
@@ -610,9 +584,8 @@ footer a{
         line-height: 1.15rem;
         font-size: 0.8rem;
     }
-    footer{
+    .footer{
         position: fixed;
         bottom: 0;
-        border-top: 1px solid var(--dark-yellow);
     }
 }
