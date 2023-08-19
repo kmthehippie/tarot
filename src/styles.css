@@ -45,18 +45,25 @@ header{
     align-items: center;
     gap: 1rem;
 }
-.major-arcana{
-    background-color: var(--dark);
-    border-radius: 1rem;
-    padding: 0.6rem 1.25rem;
-    text-align: center;
-}
+
+
 .major-arcana h1{
     font-size: 24px;
     color: var(--dark-yellow);
     font-family: var(--marvel);
     letter-spacing: 5px;
+    background-color: var(--dark);
+    border-radius: 1rem;
+    padding: 0.6rem 1.25rem;
+    text-align: center;
+    transition: 0.4s ease-in;
+    cursor: pointer;
 }
+.major-arcana h1:hover{
+    background-color: var(--dark-yellow);
+    color: var(--dark)
+}
+
 .minor-arcana{
     display: flex;
     gap: 0.3rem;
@@ -67,8 +74,12 @@ header{
     width: 47px;
     background-color: var(--dark);
     position: relative;
+    transition: 0.4s ease-in;
+    cursor: pointer;
 }
-
+.round:hover{
+    background-color: var(--dark-yellow);
+}
 .round img{
     width: 60%;
     height: 60%;
@@ -84,13 +95,13 @@ header{
 
 
 
-
-
-
 /* ===============================BODY================================ */
 .body{
-    height: 100vh;
-    margin-right: 1rem;
+    height: fit-content;
+}
+.home-page{
+    display: block;
+    
 }
 .home-page.inactive{
     display:none;
@@ -167,7 +178,7 @@ header{
     top: 5rem;
     transition: 0.4s;
     text-align: center;
-    z-index: 10;
+    z-index: 11;
 }
 
 .major-arcana-modal li{
@@ -186,7 +197,7 @@ header{
 
 .minor-arcana-modal{
     position: absolute;
-    z-index: 10;
+    z-index: 11;
     left: 0rem;
     top: 5rem;
     transition: 0.4s;
@@ -209,14 +220,15 @@ header{
 
 .card-page{
     background-color: var(--light-yellow);
-    padding-top: 0.25rem;
+    padding-top: 0.15rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1vh;
     padding-bottom: 2rem;
     position: relative;
-    height: 100%;
+    height: fit-content + 10vh;
+    width: 100vw;
 
 }
 .card-header{
@@ -231,7 +243,15 @@ header{
     letter-spacing: 5px;
     font-weight: 700;
     height: 8vh;
-    margin-bottom: 1vh;
+}
+.carousel-btn{
+    transition: 0.4s;
+
+}
+.carousel-btn:hover{
+    color: red;
+    transition: 0.4s;
+    
 }
 .card-body{
     background: var(--dark);
@@ -297,10 +317,9 @@ header{
     background-color: var(--light-yellow);
 }
 
-.card-nav-footer{
-    position: fixed;
-    bottom: 10vh;
-    width: 85vw;
+.card-nav-footer{   
+    width: 90vw;
+    border-radius: 0.8rem;
     overflow: auto;
     white-space: nowrap;
     background-color: var(--dark-yellow);
@@ -317,6 +336,7 @@ header{
     padding: 1rem 0.5rem;
     transform: 1s;
     font-size: 2vh;
+    transition: 0.4s ease-in;
 
 }
 
@@ -327,15 +347,15 @@ header{
     background-color: var(--dark);
     color: var(--light-yellow);
     font-weight: 700;
-    transform: 0.4s;
+    transition: 0.4s ease-in;
 }
 
 .card-modal{
     background-color: rgba(0,0,0,0.7);
     position: absolute;
-    top: 8vh;
+    top: 17vh;
     width: 100%;
-    height: 100%;
+    height: fit-content + 10vh;
 }
 
 .inner-card-modal{
@@ -352,27 +372,32 @@ header{
     position: relative;
 }
 .close{
-    color: var(--dark-yellow);
+    color: var(--lightest-yellow);
     font-family: var(--mont);
     font-weight: 700;
     font-size: 1.5rem;
     position: absolute;
     top: 1rem;
     right: 1rem;
+    z-index: 10;
+    transition: 0.4s;
 }
 .close:hover{
     color: rgb(116, 0, 0);
+    transition: 0.4s;
 }
 .inner-card-modal h2{
-    margin-top: 2rem;
     text-decoration: underline;
-    font-size: 2rem;
-    text-align: center
+    font-size: 1.25rem;
+    text-align: center;
+    letter-spacing: 0.25rem;
+    font-family: var(--marvel);
 }
 
 .inner-card-modal li{
     line-height: 2rem;
     list-style: disc;
+    transition: 0.4s ease-in;
 }
 
 .inner-card-modal p{
@@ -386,7 +411,7 @@ header{
 
 footer{
     position: fixed;
-    bottom: 0;
+    bottom: -2.5rem;
     margin-top: 0.15rem;
     font-family: var(--mont);
     font-size: 10px;
@@ -402,4 +427,175 @@ footer li{
 footer a{
     text-decoration: none;
     color: var(--dark-yellow);
+}
+
+@media (min-width: 450px){
+    nav{
+        display: flex;
+        width: 80vw;
+    }
+    .body{
+        margin: 0;      
+    }
+    .inner-card-modal{
+        width: 80vw;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .major-arcana-modal {
+        left: 2vw;
+    }
+    .minor-arcana-modal{
+        left: 60vw;
+    }
+    .major-arcana-modal li, .minor-arcana-modal li{
+        width: 30vw;       
+    }
+
+
+}
+
+@media (min-width: 800px){
+
+    nav{
+        display: flex;
+        max-width: 1200px;
+        height: 5rem;
+    }
+    body{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        background-color: var(--dark);
+
+    }
+    .body{
+        max-width: 1200px;
+        width: 100%;
+        border: 2px solid var(--dark)
+    }
+    .major-arcana h1{
+        font-size: 3rem;
+    }
+    .home-page{
+        margin-top: 3rem;
+        max-width: 1200px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .info-content{
+        display: grid;
+        justify-items: center;
+        width: 780px;
+        grid-template-columns: 1fr 1fr;
+        color: var(--background-light-yellow);
+    }
+    /* .info-content li{
+        color: pink;
+    } */
+    .round{
+        width: 60px;
+        height: 60px;
+    }
+    .minor-arcana{
+        gap: 1rem;
+    }
+    
+    .inner-card-modal{
+        width: 100%;
+        margin:0;
+    }
+    .major-arcana-modal, .minor-arcana-modal{
+        position: absolute;
+        left: 50vw;
+        transform: translateX(-50%);
+        margin-top: 2rem;
+    }
+    .major-arcana-modal ul, .minor-arcana-modal ul{
+        display: flex;
+        max-width: 1200px;
+        overflow: auto;
+        white-space: nowrap;
+        background-color: var(--dark-yellow);
+        z-index: 10
+    }
+    .keywords h2{
+        padding-bottom: 1rem;
+    }
+    .keywords-list li{
+        font-size: 1rem;
+        line-height: 1.25rem;
+
+    }
+
+    .major-arcana-modal li, .minor-arcana-modal li{
+        width: 300px;       
+    }
+    .card-page{
+        height: max-content;
+        width: 100%;
+        height: 90vh;
+    }
+    .card-modal{
+        position: absolute;
+        top: 23vh;
+        left: 55%;
+        transform: translateX(-30%);
+        width: 600px;
+        border-radius: 1rem;
+    }
+    .card-body{
+        position: absolute;
+        left: 30%;
+        transform: translateX(-70%);
+        top: 23vh;
+    }
+    .card-header{
+        margin-top:2rem;
+        width: 100%;
+        border: none;
+    }
+    .card-nav-footer {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        max-width: 900px;
+    }
+    .card-nav-footer li{
+        font-size: 1rem;
+    }
+    .card-nav-footer li:hover{
+        background-color: var(--lightest-yellow);
+    }
+    .card-header{
+        max-width: 1200px;
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+    .card-nav-footer{
+        max-width: 1200px;
+    }
+    .inner-card-modal{
+        max-width: 600px;
+    }
+
+    .inner-card-modal li{
+        list-style-type: none;
+    }
+    
+    .inner-card-modal p{
+        padding: 1rem;
+        line-height: 1.15rem;
+        font-size: 0.8rem;
+    }
+    footer{
+        position: fixed;
+        bottom: 0;
+        border-top: 1px solid var(--dark-yellow);
+    }
 }
