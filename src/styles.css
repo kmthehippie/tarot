@@ -188,6 +188,8 @@ header{
     background-color: var(--dark);
     color: var(--background-light-yellow);
     font-family: var(--mont);
+    cursor: pointer;
+
     
 }
 
@@ -211,6 +213,8 @@ header{
     background-color: var(--dark);
     color: var(--background-light-yellow);
     font-family: var(--mont);
+    cursor: pointer;
+
 }
 .minor-arcana-modal.inactive{
     display: none;
@@ -244,11 +248,13 @@ header{
     font-weight: 700;
     height: 8vh;
 }
-.carousel-btn{
+
+.carousel-btn, .card-np-btn{
+    cursor: pointer;
     transition: 0.4s;
 
 }
-.carousel-btn:hover{
+.carousel-btn:hover, .card-np-btn:hover{
     color: red;
     transition: 0.4s;
     
@@ -331,6 +337,7 @@ header{
 }
 
 .card-nav-footer li{
+    cursor: pointer;
     list-style: none;
     display: inline-block;
     padding: 1rem 0.5rem;
@@ -356,6 +363,7 @@ header{
     top: 17vh;
     width: 100%;
     height: fit-content + 10vh;
+    transition: 0.4s ease-in;
 }
 
 .inner-card-modal{
@@ -370,6 +378,7 @@ header{
     height: fit-content;
     padding: 1rem;
     position: relative;
+    transition: 0.4s ease-in;
 }
 .close{
     color: var(--lightest-yellow);
@@ -542,6 +551,7 @@ footer a{
         height: 90vh;
     }
     .card-modal{
+        transition:0.4s ease-in;
         position: absolute;
         top: 23vh;
         left: 55%;
@@ -554,11 +564,18 @@ footer a{
         left: 30%;
         transform: translateX(-70%);
         top: 23vh;
+        max-width: 350px;
+    }
+    .card-image{
+        width: 250px;
     }
     .card-header{
         margin-top:2rem;
         width: 100%;
         border: none;
+    }
+    .card-by{
+        width: 250px;
     }
     .card-nav-footer {
         display: flex;
