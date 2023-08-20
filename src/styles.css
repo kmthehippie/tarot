@@ -460,6 +460,7 @@ footer a{
         display: flex;
         max-width: 1200px;
         height: 5rem;
+        position: relative;
     }
     body{
         height: 100vh;
@@ -502,9 +503,7 @@ footer a{
     }
     .major-arcana-modal, .minor-arcana-modal{
         position: absolute;
-        left: 50vw;
-        transform: translateX(-50%);
-        margin-top: 2rem;
+        left: 0;
         width: 100%;
     }
     .major-arcana-modal ul, .minor-arcana-modal ul{
